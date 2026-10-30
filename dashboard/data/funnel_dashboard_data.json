@@ -1,0 +1,676 @@
+{
+  "kpis": {
+    "total_visitors": 50000,
+    "total_leads": 5914,
+    "traffic_to_lead_pct": 11.83,
+    "total_mqls": 3028,
+    "total_sqls": 1868,
+    "total_opps": 1323,
+    "total_customers": 518,
+    "overall_conversion_pct": 1.04,
+    "lead_to_customer_pct": 8.76,
+    "total_arr_usd": 16573154.51,
+    "avg_deal_arr_usd": 31994.51,
+    "total_marketing_spend_usd": 968553.82,
+    "blended_cac_usd": 1869.8,
+    "blended_roas": 17.11
+  },
+  "funnel_stages": [
+    {
+      "stage_order": 1,
+      "stage_name": "Visitor",
+      "count": 50000,
+      "step_conversion_rate_pct": 100.0,
+      "cumulative_conversion_rate_pct": 100.0,
+      "drop_off_count": 44086,
+      "drop_off_rate_pct": 88.17
+    },
+    {
+      "stage_order": 2,
+      "stage_name": "Lead",
+      "count": 5914,
+      "step_conversion_rate_pct": 11.83,
+      "cumulative_conversion_rate_pct": 11.83,
+      "drop_off_count": 2886,
+      "drop_off_rate_pct": 48.8
+    },
+    {
+      "stage_order": 3,
+      "stage_name": "MQL",
+      "count": 3028,
+      "step_conversion_rate_pct": 51.2,
+      "cumulative_conversion_rate_pct": 6.06,
+      "drop_off_count": 1160,
+      "drop_off_rate_pct": 38.31
+    },
+    {
+      "stage_order": 4,
+      "stage_name": "SQL",
+      "count": 1868,
+      "step_conversion_rate_pct": 61.69,
+      "cumulative_conversion_rate_pct": 3.74,
+      "drop_off_count": 545,
+      "drop_off_rate_pct": 29.18
+    },
+    {
+      "stage_order": 5,
+      "stage_name": "Opportunity",
+      "count": 1323,
+      "step_conversion_rate_pct": 70.82,
+      "cumulative_conversion_rate_pct": 2.65,
+      "drop_off_count": 805,
+      "drop_off_rate_pct": 60.85
+    },
+    {
+      "stage_order": 6,
+      "stage_name": "Customer",
+      "count": 518,
+      "step_conversion_rate_pct": 39.15,
+      "cumulative_conversion_rate_pct": 1.04,
+      "drop_off_count": 0,
+      "drop_off_rate_pct": 0.0
+    }
+  ],
+  "channel_performance": [
+    {
+      "marketing_channel": "Email Marketing",
+      "visitors": 5983,
+      "leads": 1106,
+      "mqls": 714,
+      "sqls": 503,
+      "opportunities": 389,
+      "customers": 185,
+      "traffic_to_lead_pct": 18.49,
+      "lead_to_mql_pct": 64.56,
+      "mql_to_sql_pct": 70.45,
+      "sql_to_opp_pct": 77.34,
+      "opp_to_cust_pct": 47.56,
+      "overall_conversion_pct": 3.09,
+      "lead_to_customer_pct": 16.73,
+      "total_spend_usd": 54541.8,
+      "cost_per_lead_cpl": 49.31,
+      "cpl": 49.31,
+      "customer_acquisition_cost_cac": 294.82,
+      "cac": 294.82,
+      "avg_deal_arr_usd": 28252.27,
+      "total_arr_usd": 5226669.46,
+      "ltv_estimate_usd": 67805.44,
+      "ltv_to_cac_ratio": 229.99,
+      "roas": 95.83
+    },
+    {
+      "marketing_channel": "Referral / Partner",
+      "visitors": 3932,
+      "leads": 641,
+      "mqls": 389,
+      "sqls": 309,
+      "opportunities": 251,
+      "customers": 103,
+      "traffic_to_lead_pct": 16.3,
+      "lead_to_mql_pct": 60.69,
+      "mql_to_sql_pct": 79.43,
+      "sql_to_opp_pct": 81.23,
+      "opp_to_cust_pct": 41.04,
+      "overall_conversion_pct": 2.62,
+      "lead_to_customer_pct": 16.07,
+      "total_spend_usd": 101117.78,
+      "cost_per_lead_cpl": 157.75,
+      "cpl": 157.75,
+      "customer_acquisition_cost_cac": 981.73,
+      "cac": 981.73,
+      "avg_deal_arr_usd": 43591.0,
+      "total_arr_usd": 4489872.61,
+      "ltv_estimate_usd": 104618.39,
+      "ltv_to_cac_ratio": 106.57,
+      "roas": 44.4
+    },
+    {
+      "marketing_channel": "Paid Search (Google)",
+      "visitors": 11016,
+      "leads": 1495,
+      "mqls": 750,
+      "sqls": 465,
+      "opportunities": 316,
+      "customers": 101,
+      "traffic_to_lead_pct": 13.57,
+      "lead_to_mql_pct": 50.17,
+      "mql_to_sql_pct": 62.0,
+      "sql_to_opp_pct": 67.96,
+      "opp_to_cust_pct": 31.96,
+      "overall_conversion_pct": 0.92,
+      "lead_to_customer_pct": 6.76,
+      "total_spend_usd": 378408.8,
+      "cost_per_lead_cpl": 253.12,
+      "cpl": 253.12,
+      "customer_acquisition_cost_cac": 3746.62,
+      "cac": 3746.62,
+      "avg_deal_arr_usd": 34617.02,
+      "total_arr_usd": 3496318.7,
+      "ltv_estimate_usd": 83080.84,
+      "ltv_to_cac_ratio": 22.17,
+      "roas": 9.24
+    },
+    {
+      "marketing_channel": "Organic Search",
+      "visitors": 14037,
+      "leads": 1342,
+      "mqls": 611,
+      "sqls": 336,
+      "opportunities": 220,
+      "customers": 86,
+      "traffic_to_lead_pct": 9.56,
+      "lead_to_mql_pct": 45.53,
+      "mql_to_sql_pct": 54.99,
+      "sql_to_opp_pct": 65.48,
+      "opp_to_cust_pct": 39.09,
+      "overall_conversion_pct": 0.61,
+      "lead_to_customer_pct": 6.41,
+      "total_spend_usd": 103096.29,
+      "cost_per_lead_cpl": 76.82,
+      "cpl": 76.82,
+      "customer_acquisition_cost_cac": 1198.79,
+      "cac": 1198.79,
+      "avg_deal_arr_usd": 23735.41,
+      "total_arr_usd": 2041244.92,
+      "ltv_estimate_usd": 56964.97,
+      "ltv_to_cac_ratio": 47.52,
+      "roas": 19.8
+    },
+    {
+      "marketing_channel": "Direct",
+      "visitors": 6969,
+      "leads": 448,
+      "mqls": 180,
+      "sqls": 97,
+      "opportunities": 64,
+      "customers": 23,
+      "traffic_to_lead_pct": 6.43,
+      "lead_to_mql_pct": 40.18,
+      "mql_to_sql_pct": 53.89,
+      "sql_to_opp_pct": 65.98,
+      "opp_to_cust_pct": 35.94,
+      "overall_conversion_pct": 0.33,
+      "lead_to_customer_pct": 5.13,
+      "total_spend_usd": 12411.13,
+      "cost_per_lead_cpl": 27.7,
+      "cpl": 27.7,
+      "customer_acquisition_cost_cac": 539.61,
+      "cac": 539.61,
+      "avg_deal_arr_usd": 24420.51,
+      "total_arr_usd": 561671.83,
+      "ltv_estimate_usd": 58609.23,
+      "ltv_to_cac_ratio": 108.61,
+      "roas": 45.26
+    },
+    {
+      "marketing_channel": "Social Media - Paid",
+      "visitors": 8063,
+      "leads": 882,
+      "mqls": 384,
+      "sqls": 158,
+      "opportunities": 83,
+      "customers": 20,
+      "traffic_to_lead_pct": 10.94,
+      "lead_to_mql_pct": 43.54,
+      "mql_to_sql_pct": 41.15,
+      "sql_to_opp_pct": 52.53,
+      "opp_to_cust_pct": 24.1,
+      "overall_conversion_pct": 0.25,
+      "lead_to_customer_pct": 2.27,
+      "total_spend_usd": 318978.02,
+      "cost_per_lead_cpl": 361.65,
+      "cpl": 361.65,
+      "customer_acquisition_cost_cac": 15948.9,
+      "cac": 15948.9,
+      "avg_deal_arr_usd": 37868.85,
+      "total_arr_usd": 757376.99,
+      "ltv_estimate_usd": 90885.24,
+      "ltv_to_cac_ratio": 5.7,
+      "roas": 2.37
+    }
+  ],
+  "drop_off_reasons": [
+    {
+      "drop_off_stage": "Lead",
+      "drop_off_reason": "Unqualified intent",
+      "count": 749,
+      "pct_within_stage": 25.95
+    },
+    {
+      "drop_off_stage": "Lead",
+      "drop_off_reason": "Form abandonment",
+      "count": 734,
+      "pct_within_stage": 25.43
+    },
+    {
+      "drop_off_stage": "Lead",
+      "drop_off_reason": "Competitor research",
+      "count": 712,
+      "pct_within_stage": 24.67
+    },
+    {
+      "drop_off_stage": "Lead",
+      "drop_off_reason": "Email validation failure",
+      "count": 691,
+      "pct_within_stage": 23.94
+    },
+    {
+      "drop_off_stage": "MQL",
+      "drop_off_reason": "Non-business email",
+      "count": 315,
+      "pct_within_stage": 27.16
+    },
+    {
+      "drop_off_stage": "MQL",
+      "drop_off_reason": "Inactive company",
+      "count": 287,
+      "pct_within_stage": 24.74
+    },
+    {
+      "drop_off_stage": "MQL",
+      "drop_off_reason": "No decision-maker authority",
+      "count": 280,
+      "pct_within_stage": 24.14
+    },
+    {
+      "drop_off_stage": "MQL",
+      "drop_off_reason": "Low lead score",
+      "count": 278,
+      "pct_within_stage": 23.97
+    },
+    {
+      "drop_off_stage": "Opportunity",
+      "drop_off_reason": "Price too high / Budget freeze",
+      "count": 178,
+      "pct_within_stage": 22.11
+    },
+    {
+      "drop_off_stage": "Opportunity",
+      "drop_off_reason": "Competitor won on features",
+      "count": 166,
+      "pct_within_stage": 20.62
+    },
+    {
+      "drop_off_stage": "Opportunity",
+      "drop_off_reason": "Lack of executive buy-in",
+      "count": 154,
+      "pct_within_stage": 19.13
+    },
+    {
+      "drop_off_stage": "Opportunity",
+      "drop_off_reason": "Project postponed",
+      "count": 154,
+      "pct_within_stage": 19.13
+    },
+    {
+      "drop_off_stage": "Opportunity",
+      "drop_off_reason": "Security / Compliance blocker",
+      "count": 153,
+      "pct_within_stage": 19.01
+    },
+    {
+      "drop_off_stage": "SQL",
+      "drop_off_reason": "Unresponsive to BDR calls",
+      "count": 154,
+      "pct_within_stage": 28.26
+    },
+    {
+      "drop_off_stage": "SQL",
+      "drop_off_reason": "Budget unavailable",
+      "count": 146,
+      "pct_within_stage": 26.79
+    },
+    {
+      "drop_off_stage": "SQL",
+      "drop_off_reason": "Chose internal solution",
+      "count": 134,
+      "pct_within_stage": 24.59
+    },
+    {
+      "drop_off_stage": "SQL",
+      "drop_off_reason": "No current project",
+      "count": 111,
+      "pct_within_stage": 20.37
+    },
+    {
+      "drop_off_stage": "Visitor",
+      "drop_off_reason": "No clear CTA",
+      "count": 11134,
+      "pct_within_stage": 25.26
+    },
+    {
+      "drop_off_stage": "Visitor",
+      "drop_off_reason": "Slow page load",
+      "count": 11080,
+      "pct_within_stage": 25.13
+    },
+    {
+      "drop_off_stage": "Visitor",
+      "drop_off_reason": "Irrelevant landing page",
+      "count": 10945,
+      "pct_within_stage": 24.83
+    },
+    {
+      "drop_off_stage": "Visitor",
+      "drop_off_reason": "Bounced within 10s",
+      "count": 10927,
+      "pct_within_stage": 24.79
+    }
+  ],
+  "device_performance": [
+    {
+      "device_type": "Desktop",
+      "visitors": 30870,
+      "leads": 4186,
+      "customers": 355,
+      "total_arr": 11256941.89,
+      "traffic_to_lead_pct": 13.56,
+      "overall_conv_pct": 1.15
+    },
+    {
+      "device_type": "Mobile",
+      "visitors": 16560,
+      "leads": 1476,
+      "customers": 133,
+      "total_arr": 4509781.03,
+      "traffic_to_lead_pct": 8.91,
+      "overall_conv_pct": 0.8
+    },
+    {
+      "device_type": "Tablet",
+      "visitors": 2570,
+      "leads": 252,
+      "customers": 30,
+      "total_arr": 806431.59,
+      "traffic_to_lead_pct": 9.81,
+      "overall_conv_pct": 1.17
+    }
+  ],
+  "segment_performance": [
+    {
+      "customer_segment": "Enterprise",
+      "visitors": 8873,
+      "leads": 1072,
+      "sqls": 463,
+      "customers": 131,
+      "total_arr": 8091434.87,
+      "avg_deal_arr": 61766.68,
+      "lead_to_customer_pct": 12.22,
+      "overall_conv_pct": 1.48
+    },
+    {
+      "customer_segment": "Mid-Market",
+      "visitors": 16157,
+      "leads": 1929,
+      "sqls": 668,
+      "customers": 188,
+      "total_arr": 5770971.41,
+      "avg_deal_arr": 30696.66,
+      "lead_to_customer_pct": 9.75,
+      "overall_conv_pct": 1.16
+    },
+    {
+      "customer_segment": "SMB",
+      "visitors": 17478,
+      "leads": 2056,
+      "sqls": 492,
+      "customers": 140,
+      "total_arr": 2151128.77,
+      "avg_deal_arr": 15365.21,
+      "lead_to_customer_pct": 6.81,
+      "overall_conv_pct": 0.8
+    },
+    {
+      "customer_segment": "Startup",
+      "visitors": 7492,
+      "leads": 857,
+      "sqls": 245,
+      "customers": 59,
+      "total_arr": 559619.46,
+      "avg_deal_arr": 9485.08,
+      "lead_to_customer_pct": 6.88,
+      "overall_conv_pct": 0.79
+    }
+  ],
+  "velocity": {
+    "metrics": {
+      "visitor_to_lead_median_hours": 0.8,
+      "lead_to_mql_median_hours": 22.0,
+      "mql_to_sql_median_days": 3.5,
+      "sql_to_opp_median_days": 6.0,
+      "opp_to_cust_median_days": 25.9,
+      "total_sales_cycle_median_days": 38.0,
+      "total_sales_cycle_mean_days": 40.6
+    },
+    "channel_velocity": [
+      {
+        "marketing_channel": "Direct",
+        "median_days": 45.3,
+        "mean_days": 46.0,
+        "count": 23
+      },
+      {
+        "marketing_channel": "Email Marketing",
+        "median_days": 37.5,
+        "mean_days": 40.6,
+        "count": 185
+      },
+      {
+        "marketing_channel": "Organic Search",
+        "median_days": 39.6,
+        "mean_days": 41.3,
+        "count": 86
+      },
+      {
+        "marketing_channel": "Paid Search (Google)",
+        "median_days": 36.7,
+        "mean_days": 38.3,
+        "count": 101
+      },
+      {
+        "marketing_channel": "Referral / Partner",
+        "median_days": 39.1,
+        "mean_days": 41.0,
+        "count": 103
+      },
+      {
+        "marketing_channel": "Social Media - Paid",
+        "median_days": 37.8,
+        "mean_days": 40.1,
+        "count": 20
+      }
+    ]
+  },
+  "monthly_trends": [
+    {
+      "visitor_cohort_month": "2025-01",
+      "visitors": 4251,
+      "leads": 548,
+      "mqls": 302,
+      "sqls": 190,
+      "opps": 128,
+      "customers": 48,
+      "total_arr": 1538175.76,
+      "traffic_to_lead_pct": 12.89,
+      "lead_to_customer_pct": 8.76,
+      "overall_conv_pct": 1.13
+    },
+    {
+      "visitor_cohort_month": "2025-02",
+      "visitors": 3796,
+      "leads": 460,
+      "mqls": 223,
+      "sqls": 144,
+      "opps": 102,
+      "customers": 45,
+      "total_arr": 1363129.31,
+      "traffic_to_lead_pct": 12.12,
+      "lead_to_customer_pct": 9.78,
+      "overall_conv_pct": 1.19
+    },
+    {
+      "visitor_cohort_month": "2025-03",
+      "visitors": 4336,
+      "leads": 523,
+      "mqls": 269,
+      "sqls": 160,
+      "opps": 125,
+      "customers": 48,
+      "total_arr": 1514834.08,
+      "traffic_to_lead_pct": 12.06,
+      "lead_to_customer_pct": 9.18,
+      "overall_conv_pct": 1.11
+    },
+    {
+      "visitor_cohort_month": "2025-04",
+      "visitors": 4041,
+      "leads": 442,
+      "mqls": 232,
+      "sqls": 143,
+      "opps": 94,
+      "customers": 43,
+      "total_arr": 1178744.02,
+      "traffic_to_lead_pct": 10.94,
+      "lead_to_customer_pct": 9.73,
+      "overall_conv_pct": 1.06
+    },
+    {
+      "visitor_cohort_month": "2025-05",
+      "visitors": 4224,
+      "leads": 483,
+      "mqls": 260,
+      "sqls": 150,
+      "opps": 101,
+      "customers": 43,
+      "total_arr": 1447370.75,
+      "traffic_to_lead_pct": 11.43,
+      "lead_to_customer_pct": 8.9,
+      "overall_conv_pct": 1.02
+    },
+    {
+      "visitor_cohort_month": "2025-06",
+      "visitors": 4123,
+      "leads": 500,
+      "mqls": 247,
+      "sqls": 157,
+      "opps": 107,
+      "customers": 45,
+      "total_arr": 1417652.75,
+      "traffic_to_lead_pct": 12.13,
+      "lead_to_customer_pct": 9.0,
+      "overall_conv_pct": 1.09
+    },
+    {
+      "visitor_cohort_month": "2025-07",
+      "visitors": 4220,
+      "leads": 503,
+      "mqls": 249,
+      "sqls": 145,
+      "opps": 98,
+      "customers": 32,
+      "total_arr": 1150302.69,
+      "traffic_to_lead_pct": 11.92,
+      "lead_to_customer_pct": 6.36,
+      "overall_conv_pct": 0.76
+    },
+    {
+      "visitor_cohort_month": "2025-08",
+      "visitors": 4179,
+      "leads": 485,
+      "mqls": 248,
+      "sqls": 160,
+      "opps": 119,
+      "customers": 45,
+      "total_arr": 1610137.43,
+      "traffic_to_lead_pct": 11.61,
+      "lead_to_customer_pct": 9.28,
+      "overall_conv_pct": 1.08
+    },
+    {
+      "visitor_cohort_month": "2025-09",
+      "visitors": 4193,
+      "leads": 478,
+      "mqls": 246,
+      "sqls": 148,
+      "opps": 102,
+      "customers": 40,
+      "total_arr": 1180958.1199999999,
+      "traffic_to_lead_pct": 11.4,
+      "lead_to_customer_pct": 8.37,
+      "overall_conv_pct": 0.95
+    },
+    {
+      "visitor_cohort_month": "2025-10",
+      "visitors": 4315,
+      "leads": 500,
+      "mqls": 249,
+      "sqls": 154,
+      "opps": 113,
+      "customers": 42,
+      "total_arr": 1470460.38,
+      "traffic_to_lead_pct": 11.59,
+      "lead_to_customer_pct": 8.4,
+      "overall_conv_pct": 0.97
+    },
+    {
+      "visitor_cohort_month": "2025-11",
+      "visitors": 4106,
+      "leads": 490,
+      "mqls": 254,
+      "sqls": 157,
+      "opps": 108,
+      "customers": 45,
+      "total_arr": 1286299.45,
+      "traffic_to_lead_pct": 11.93,
+      "lead_to_customer_pct": 9.18,
+      "overall_conv_pct": 1.1
+    },
+    {
+      "visitor_cohort_month": "2025-12",
+      "visitors": 4216,
+      "leads": 502,
+      "mqls": 249,
+      "sqls": 160,
+      "opps": 126,
+      "customers": 42,
+      "total_arr": 1415089.77,
+      "traffic_to_lead_pct": 11.91,
+      "lead_to_customer_pct": 8.37,
+      "overall_conv_pct": 1.0
+    }
+  ],
+  "revenue_scenarios": [
+    {
+      "initiative": "Landing Page & CTA UX Optimization (+10% Visitor->Lead)",
+      "targeted_stage": "Visitor -> Lead",
+      "baseline_customers": 518,
+      "simulated_customers": 569,
+      "net_new_customers": 51,
+      "additional_arr_usd": 1631719.85
+    },
+    {
+      "initiative": "Lead Scoring & Automated Nurturing (+15% Lead->MQL)",
+      "targeted_stage": "Lead -> MQL",
+      "baseline_customers": 518,
+      "simulated_customers": 595,
+      "net_new_customers": 77,
+      "additional_arr_usd": 2463577.02
+    },
+    {
+      "initiative": "Sales Enablement & Deal Acceleration (+10% Opp->Customer)",
+      "targeted_stage": "Opportunity -> Customer",
+      "baseline_customers": 518,
+      "simulated_customers": 569,
+      "net_new_customers": 51,
+      "additional_arr_usd": 1631719.85
+    },
+    {
+      "initiative": "Full-Funnel Compounding Growth (+5% uplift at every stage)",
+      "targeted_stage": "All Stages (1.05^5 = +27.6% compounding)",
+      "baseline_customers": 518,
+      "simulated_customers": 661,
+      "net_new_customers": 143,
+      "additional_arr_usd": 4575214.47
+    }
+  ]
+}

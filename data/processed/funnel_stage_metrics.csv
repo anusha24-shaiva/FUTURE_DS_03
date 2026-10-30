@@ -1,0 +1,7 @@
+stage_order,stage_name,count,step_conversion_rate_pct,cumulative_conversion_rate_pct,drop_off_count,drop_off_rate_pct
+1,Visitor,50000,100.0,100.0,44086,88.17
+2,Lead,5914,11.83,11.83,2886,48.8
+3,MQL,3028,51.2,6.06,1160,38.31
+4,SQL,1868,61.69,3.74,545,29.18
+5,Opportunity,1323,70.82,2.65,805,60.85
+6,Customer,518,39.15,1.04,0,0.0

@@ -1,0 +1,5 @@
+initiative,targeted_stage,baseline_customers,simulated_customers,net_new_customers,additional_arr_usd
+Landing Page & CTA UX Optimization (+10% Visitor->Lead),Visitor -> Lead,518,569,51,1631719.85
+Lead Scoring & Automated Nurturing (+15% Lead->MQL),Lead -> MQL,518,595,77,2463577.02
+Sales Enablement & Deal Acceleration (+10% Opp->Customer),Opportunity -> Customer,518,569,51,1631719.85
+Full-Funnel Compounding Growth (+5% uplift at every stage),All Stages (1.05^5 = +27.6% compounding),518,661,143,4575214.47

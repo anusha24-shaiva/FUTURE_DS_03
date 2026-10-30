@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Funnel & Conversion Performance Dashboard | Future Interns</title>
+    <meta name="description" content="Executive marketing funnel and conversion rate performance analytics dashboard analyzing visitor-to-customer journeys, stage drop-offs, channel ROI, and revenue simulation.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Chart.js & Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="brand-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+            </div>
+            <div>
+                <h1 class="brand-title">FunnelPulse™ Analytics</h1>
+                <p class="brand-subtitle">Marketing Funnel & Conversion Performance Intelligence • 2026</p>
+            </div>
+        </div>
+
+        <div class="nav-actions">
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>Dataset: 50,000 Cleaned User Journeys</span>
+            </div>
+            <button id="themeToggleBtn" class="btn btn-secondary" title="Toggle Light/Dark Theme">
+                <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <span id="themeText">Light</span>
+            </button>
+            <button onclick="window.print()" class="btn btn-secondary" title="Export or Print Report">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9V2h12v7"></path>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                <span>Print / PDF</span>
+            </button>
+            <a href="#simulator" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                <span>Revenue Simulator</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Interactive Global Filter Bar -->
+        <section class="filters-card">
+            <div class="filters-header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                <span>Filter Interactive Funnel & Performance Views:</span>
+            </div>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="channelFilter">Acquisition Channel</label>
+                    <select id="channelFilter" class="form-select">
+                        <option value="ALL">All Channels (Blended Funnel)</option>
+                        <option value="Organic Search">Organic Search</option>
+                        <option value="Paid Search (Google)">Paid Search (Google)</option>
+                        <option value="Social Media - Paid">Social Media - Paid</option>
+                        <option value="Email Marketing">Email Marketing</option>
+                        <option value="Referral / Partner">Referral / Partner</option>
+                        <option value="Direct">Direct</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="segmentFilter">Customer Segment</label>
+                    <select id="segmentFilter" class="form-select">
+                        <option value="ALL">All Segments</option>
+                        <option value="Enterprise">Enterprise</option>
+                        <option value="Mid-Market">Mid-Market</option>
+                        <option value="SMB">SMB</option>
+                        <option value="Startup">Startup</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="deviceFilter">Device Category</label>
+                    <select id="deviceFilter" class="form-select">
+                        <option value="ALL">All Devices</option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Tablet">Tablet</option>
+                    </select>
+                </div>
+                <div class="filter-reset-wrapper">
+                    <button id="resetFiltersBtn" class="btn btn-outline">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive KPI Cards -->
+        <section class="kpi-grid">
+            <div class="kpi-card" id="kpi-visitors">
+                <div class="kpi-meta">
+                    <span class="kpi-title">Total Web Visitors</span>
+                    <span class="kpi-badge badge-blue">Stage 1</span>
+                </div>
+                <div class="kpi-value" id="val-visitors">50,000</div>
+                <div class="kpi-subtext">Top-of-funnel traffic sessions</div>
+            </div>
+
+            <div class="kpi-card" id="kpi-leads">
+                <div class="kpi-meta">
+                    <span class="kpi-title">Captured Leads</span>
+                    <span class="kpi-badge badge-purple" id="badge-traffic-lead">11.83% Conv.</span>
+                </div>
+                <div class="kpi-value" id="val-leads">5,914</div>
+                <div class="kpi-subtext">Gated content & demo sign-ups</div>
+            </div>
+
+            <div class="kpi-card" id="kpi-sqls">
+                <div class="kpi-meta">
+                    <span class="kpi-title">Sales Qualified (SQL)</span>
+                    <span class="kpi-badge badge-amber" id="badge-sql-rate">31.6% of Leads</span>
+                </div>
+                <div class="kpi-value" id="val-sqls">1,868</div>
+                <div class="kpi-subtext">Validated discovery & demo calls</div>
+            </div>
+
+            <div class="kpi-card" id="kpi-customers">
+                <div class="kpi-meta">
+                    <span class="kpi-title">Won Customers</span>
+                    <span class="kpi-badge badge-green" id="badge-overall-conv">1.04% End-to-End</span>
+                </div>
+                <div class="kpi-value" id="val-customers">518</div>
+                <div class="kpi-subtext" id="subtext-lead-cust">8.76% Lead-to-Customer Rate</div>
+            </div>
+
+            <div class="kpi-card" id="kpi-revenue">
+                <div class="kpi-meta">
+                    <span class="kpi-title">Total Closed ARR</span>
+                    <span class="kpi-badge badge-emerald">Revenue</span>
+                </div>
+                <div class="kpi-value" id="val-revenue">$16.58M</div>
+                <div class="kpi-subtext" id="val-avg-deal">Avg Deal ARR: $32,001</div>
+            </div>
+
+            <div class="kpi-card" id="kpi-roas">
+                <div class="kpi-meta">
+                    <span class="kpi-title">Blended CAC & ROAS</span>
+                    <span class="kpi-badge badge-cyan">Unit Economics</span>
+                </div>
+                <div class="kpi-value" id="val-roas">19.4x ROAS</div>
+                <div class="kpi-subtext" id="val-cac">Blended CAC: $1,496 / deal</div>
+            </div>
+        </section>
+
+        <!-- Main Visual Funnel & Diagnostics Grid -->
+        <section class="grid-2col">
+            <!-- Funnel Flow Waterfall Card -->
+            <div class="card funnel-flow-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Full Funnel Conversion Progression</h2>
+                        <p class="card-subtitle">User journey progression through each milestone with step conversion rates</p>
+                    </div>
+                    <span class="pill-indicator" id="funnelScopeBadge">All Channels Blended</span>
+                </div>
+                <div class="funnel-container" id="funnelVisualizer">
+                    <!-- Injected dynamically via app.js -->
+                </div>
+            </div>
+
+            <!-- Bottleneck & Drop-off Diagnostic Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Funnel Drop-Off & Bottleneck Analysis</h2>
+                        <p class="card-subtitle">Where prospects abandon the funnel and key root cause drivers</p>
+                    </div>
+                </div>
+                <div class="bottleneck-summary-box">
+                    <div class="bottleneck-tag">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <span>Top Conversion Chokepoints</span>
+                    </div>
+                    <p class="bottleneck-desc">
+                        <strong>1. Visitor → Lead Stage:</strong> 88.17% drop-off (44,086 lost visitors). Primary cause: high bounce on mobile and weak CTA clarity.<br>
+                        <strong>2. Opportunity → Customer Stage:</strong> 60.85% drop-off (805 lost deals). Primary cause: deal stalls during security/pricing negotiation.
+                    </p>
+                </div>
+                <div class="chart-box">
+                    <canvas id="dropoffReasonsChart" height="230"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Channel Performance & Unit Economics Matrix -->
+        <section class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">Channel Performance & Lead Quality Scorecard</h2>
+                    <p class="card-subtitle">Comparative analysis of conversion efficiency, CAC, deal size, and return on ad spend (ROAS)</p>
+                </div>
+                <button class="btn btn-outline" id="exportCsvBtn">Export CSV Data</button>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table" id="channelTable">
+                    <thead>
+                        <tr>
+                            <th>Marketing Channel</th>
+                            <th>Visitors</th>
+                            <th>Leads</th>
+                            <th>Won Cust.</th>
+                            <th>Traffic→Lead %</th>
+                            <th>Lead→Cust %</th>
+                            <th>Total ARR</th>
+                            <th>CAC ($)</th>
+                            <th>LTV:CAC</th>
+                            <th>ROAS</th>
+                            <th>Efficiency Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody id="channelTableBody">
+                        <!-- Rendered by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Deep Dive Charts: Conversion Velocity & Segment Breakdown -->
+        <section class="grid-2col">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Conversion Velocity (Sales Cycle Time)</h2>
+                        <p class="card-subtitle">Median transition duration across stages and closing velocity by channel</p>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <canvas id="velocityChart" height="240"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Monthly Funnel Trend (Cohort Progress)</h2>
+                        <p class="card-subtitle">12-Month progression of Visitors, Leads, and Won Customers</p>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <canvas id="cohortTrendChart" height="240"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive What-If Revenue Simulator -->
+        <section class="card simulator-card" id="simulator">
+            <div class="card-header">
+                <div>
+                    <div class="badge-pill">Interactive Growth Model</div>
+                    <h2 class="card-title">Revenue Impact & Funnel Optimization Simulator</h2>
+                    <p class="card-subtitle">Simulate how improving stage conversion rates directly increases closed-won customers and ARR</p>
+                </div>
+                <button id="resetSimBtn" class="btn btn-outline">Reset to Baseline</button>
+            </div>
+
+            <div class="simulator-body">
+                <!-- Sliders Section -->
+                <div class="sim-controls">
+                    <div class="sim-slider-group">
+                        <div class="slider-header">
+                            <label for="trafficSlider">Top-of-Funnel Visitor Traffic</label>
+                            <span class="slider-badge" id="trafficVal">50,000 (+0%)</span>
+                        </div>
+                        <input type="range" id="trafficSlider" min="25000" max="100000" step="5000" value="50000" class="sim-range">
+                        <div class="slider-ticks"><span>25k (-50%)</span><span>Baseline (50k)</span><span>100k (+100%)</span></div>
+                    </div>
+
+                    <div class="sim-slider-group">
+                        <div class="slider-header">
+                            <label for="leadRateSlider">Traffic → Lead Conversion Rate</label>
+                            <span class="slider-badge" id="leadRateVal">11.8% (Baseline)</span>
+                        </div>
+                        <input type="range" id="leadRateSlider" min="5" max="25" step="0.5" value="11.8" class="sim-range">
+                        <div class="slider-ticks"><span>5%</span><span>Baseline (11.8%)</span><span>25%</span></div>
+                    </div>
+
+                    <div class="sim-slider-group">
+                        <div class="slider-header">
+                            <label for="mqlRateSlider">Lead → MQL Qualification Rate</label>
+                            <span class="slider-badge" id="mqlRateVal">51.2% (Baseline)</span>
+                        </div>
+                        <input type="range" id="mqlRateSlider" min="30" max="75" step="1" value="51.2" class="sim-range">
+                        <div class="slider-ticks"><span>30%</span><span>Baseline (51.2%)</span><span>75%</span></div>
+                    </div>
+
+                    <div class="sim-slider-group">
+                        <div class="slider-header">
+                            <label for="winRateSlider">Opportunity → Customer Win Rate</label>
+                            <span class="slider-badge" id="winRateVal">39.2% (Baseline)</span>
+                        </div>
+                        <input type="range" id="winRateSlider" min="20" max="65" step="1" value="39.2" class="sim-range">
+                        <div class="slider-ticks"><span>20%</span><span>Baseline (39.2%)</span><span>65%</span></div>
+                    </div>
+                </div>
+
+                <!-- Simulation Results Output Display -->
+                <div class="sim-results">
+                    <div class="sim-result-card highlight">
+                        <span class="sim-res-title">Projected Won Customers</span>
+                        <div class="sim-res-value" id="simCustomers">518</div>
+                        <span class="sim-res-diff" id="simCustomerDiff">+0 vs Baseline</span>
+                    </div>
+
+                    <div class="sim-result-card highlight-green">
+                        <span class="sim-res-title">Projected Annual Recurring Revenue</span>
+                        <div class="sim-res-value" id="simArr">$16.58M</div>
+                        <span class="sim-res-diff" id="simArrDiff">+$0.00M Additional ARR</span>
+                    </div>
+
+                    <div class="sim-result-card">
+                        <span class="sim-res-title">Simulated End-to-End Conv. Rate</span>
+                        <div class="sim-res-value" id="simConvRate">1.04%</div>
+                        <span class="sim-res-diff" id="simConvDiff">Baseline 1.04%</span>
+                    </div>
+
+                    <div class="sim-takeaway">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                        <p id="simRecommendationText">
+                            Adjusting landing page conversion and lead qualification by just +10% yields over <strong>$1.65M in new ARR</strong> without spending an extra dollar on ad budget.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actionable Recommendations Matrix -->
+        <section class="card recommendations-card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">Strategic Action Plan & Funnel Optimization Roadmap</h2>
+                    <p class="card-subtitle">Prioritized data-backed initiatives to plug leakage and maximize revenue per lead</p>
+                </div>
+            </div>
+            <div class="recs-grid">
+                <div class="rec-card priority-high">
+                    <div class="rec-badge badge-danger">Priority 1 • Quick Win</div>
+                    <h3 class="rec-title">Optimize Mobile Landing Pages & Reduce Bounce</h3>
+                    <p class="rec-desc">
+                        Mobile conversion lags desktop by 35% (7.8% vs 13.9% lead rate) with high bounce. Implement accelerated mobile pages, frictionless 1-click Google/LinkedIn social login, and sticky CTAs.
+                    </p>
+                    <div class="rec-impact"><strong>Expected Uplift:</strong> +12% Visitor→Lead Conv. (+$1.98M ARR)</div>
+                </div>
+
+                <div class="rec-card priority-high">
+                    <div class="rec-badge badge-amber">Priority 2 • Mid-Term</div>
+                    <h3 class="rec-title">Automate Lead Scoring & BDR Response Time</h3>
+                    <p class="rec-desc">
+                        48.8% of leads drop before MQL due to delayed outreach and manual qualification. Deploy automated routing for leads with score ≥75, guaranteeing contact under 5 minutes.
+                    </p>
+                    <div class="rec-impact"><strong>Expected Uplift:</strong> +15% Lead→MQL Conv. (+$2.48M ARR)</div>
+                </div>
+
+                <div class="rec-card priority-medium">
+                    <div class="rec-badge badge-purple">Priority 3 • Budget Reallocation</div>
+                    <h3 class="rec-title">Reallocate Spend from Paid Social to Referral & Email</h3>
+                    <p class="rec-desc">
+                        Paid Social has an unsustainable $15,948 CAC and 2.37x ROAS, whereas Referral and Email boast >44x ROAS and sub-$1,000 CAC. Shift $10,000/mo into co-marketing and partner directories.
+                    </p>
+                    <div class="rec-impact"><strong>Expected Uplift:</strong> -38% Blended CAC, +$1.85M ARR</div>
+                </div>
+
+                <div class="rec-card priority-low">
+                    <div class="rec-badge badge-blue">Priority 4 • Sales Enablement</div>
+                    <h3 class="rec-title">Standardize Security Review & ROI Business Cases</h3>
+                    <p class="rec-desc">
+                        60.8% of Opportunities fail to close, with pricing pushback and compliance approvals cited as top reasons. Provide reps with pre-packaged SOC2/GDPR compliance kits and CFO-ready ROI calculators.
+                    </p>
+                    <div class="rec-impact"><strong>Expected Uplift:</strong> +8% Opp→Customer Win Rate (+$1.32M ARR)</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dashboard-footer">
+        <p><strong>Marketing Funnel & Conversion Performance Analysis</strong> • Task 3 (2026) by Future Interns</p>
+        <p class="footer-subtext">Built with modern HTML5, Vanilla CSS, and JavaScript. Designed for executive decision making.</p>
+    </footer>
+
+    <!-- Load data script and app logic -->
+    <script src="data/funnel_dashboard_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "initial_rows": 50750,
+    "duplicates_removed": 750,
+    "channel_mappings_corrected": 2129,
+    "device_casing_corrected": 0,
+    "missing_values_handled": {
+        "utm_source_raw": 4650,
+        "utm_medium_raw": 7992,
+        "utm_campaign_raw": 10566,
+        "company_size": 2526,
+        "lead_score_raw": 44086
+    },
+    "chronology_validations_passed": 50000,
+    "final_clean_rows": 50000
+}

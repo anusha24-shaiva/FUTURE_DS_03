@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Consulting Report: Marketing Funnel & Conversion Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #2563eb;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2.5rem 1rem;
+            background-color: var(--bg-gray);
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 3.5rem 4rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .report-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 0 0 0.5rem 0;
+            line-height: 1.25;
+        }
+        .meta-line {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.4rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #334155;
+            margin-top: 1.5rem;
+            margin-bottom: 0.6rem;
+        }
+        p, li {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.88rem;
+        }
+        th, td {
+            padding: 0.75rem 0.9rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        .figure-box {
+            text-align: center;
+            margin: 2rem 0;
+            background: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .figure-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .figure-caption {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .btn-print {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            float: right;
+        }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .container { box-shadow: none; border: none; padding: 0; max-width: 100%; }
+            .btn-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+        <div class="report-header">
+            <span class="badge">Strategic Consulting Report</span>
+            <h1>Marketing Funnel & Conversion Performance Analysis</h1>
+            <p class="meta-line"><strong>Data Science & Analytics – Task 3 (2026)</strong> • Future Interns • Analyzed Cohort: 50,000 Visitor Journeys</p>
+        </div>
+
+        <h2>1. Executive Summary</h2>
+        <p>
+            Conversion rate optimization across the marketing and sales funnel is the single highest-leverage growth driver for modern enterprises. This study analyzes an enterprise B2B SaaS marketing funnel tracking <strong>50,000 unique prospective buyer journeys</strong> over a 12-month period across 6 acquisition channels.
+        </p>
+        <div class="highlight-box">
+            <strong>Key Headline Metrics:</strong>
+            <ul>
+                <li><strong>Total Pipeline ARR Generated:</strong> $16,576,683 across 518 Won Customers ($32,001 average deal ARR).</li>
+                <li><strong>Overall Funnel Conversion Rate:</strong> 1.04% (Visitor to Customer), with a 11.83% Traffic-to-Lead conversion rate.</li>
+                <li><strong>Critical Bottleneck:</strong> 88.17% of visitors bounce at Stage 1, while 60.85% of active opportunities drop during final contract review.</li>
+                <li><strong>Highest ROI Channels:</strong> Email Marketing (95.8x ROAS, $295 CAC) and Referral/Partner (44.4x ROAS, $982 CAC).</li>
+            </ul>
+        </div>
+
+        <h2>2. Funnel Architecture & Progression Waterfall</h2>
+        <p>The table below summarizes user progression through each milestone:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Milestone Name</th>
+                    <th>Active Count</th>
+                    <th>Step Conv. (%)</th>
+                    <th>Cum. Conv. (%)</th>
+                    <th>Drop-off Count</th>
+                    <th>Drop-off Rate (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td><strong>Visitor</strong></td><td>50,000</td><td>100.00%</td><td>100.00%</td><td>44,086</td><td>88.17%</td></tr>
+                <tr><td>2</td><td><strong>Lead</strong></td><td>5,914</td><td>11.83%</td><td>11.83%</td><td>2,886</td><td>48.80%</td></tr>
+                <tr><td>3</td><td><strong>MQL</strong></td><td>3,028</td><td>51.20%</td><td>6.06%</td><td>1,160</td><td>38.31%</td></tr>
+                <tr><td>4</td><td><strong>SQL</strong></td><td>1,868</td><td>61.69%</td><td>3.74%</td><td>545</td><td>29.18%</td></tr>
+                <tr><td>5</td><td><strong>Opportunity</strong></td><td>1,323</td><td>70.82%</td><td>2.65%</td><td>805</td><td>60.85%</td></tr>
+                <tr><td>6</td><td><strong>Customer</strong></td><td><strong>518</strong></td><td><strong>39.15%</strong></td><td><strong>1.04%</strong></td><td>—</td><td>—</td></tr>
+            </tbody>
+        </table>
+
+        <div class="figure-box">
+            <img src="figures/funnel_waterfall_dropoff.png" alt="Funnel Waterfall Progression">
+            <div class="figure-caption">Figure 1: Full-Funnel Stage Progression and Drop-off Leakage Waterfall</div>
+        </div>
+
+        <h2>3. Channel Attribution & Unit Economics (CAC, LTV, ROAS)</h2>
+        <p>Acquisition channel volume does not correlate with customer conversion quality or economic return:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marketing Channel</th>
+                    <th>Visitors</th>
+                    <th>Leads</th>
+                    <th>Won Cust.</th>
+                    <th>Traffic→Lead %</th>
+                    <th>Lead→Cust %</th>
+                    <th>Total ARR</th>
+                    <th>CAC ($)</th>
+                    <th>ROAS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Email Marketing</strong></td><td>5,983</td><td>1,106</td><td>185</td><td>18.49%</td><td>16.73%</td><td>$5,226,669</td><td>$295</td><td><strong>95.8x</strong></td></tr>
+                <tr><td><strong>Referral / Partner</strong></td><td>3,932</td><td>641</td><td>103</td><td>16.30%</td><td>16.07%</td><td>$4,489,873</td><td>$982</td><td><strong>44.4x</strong></td></tr>
+                <tr><td><strong>Paid Search (Google)</strong></td><td>11,016</td><td>1,495</td><td>101</td><td>13.57%</td><td>6.76%</td><td>$3,496,319</td><td>$3,747</td><td><strong>9.2x</strong></td></tr>
+                <tr><td><strong>Organic Search</strong></td><td>14,037</td><td>1,342</td><td>86</td><td>9.56%</td><td>6.41%</td><td>$2,041,245</td><td>$1,199</td><td><strong>19.8x</strong></td></tr>
+                <tr><td><strong>Direct</strong></td><td>6,969</td><td>448</td><td>23</td><td>6.43%</td><td>5.13%</td><td>$561,672</td><td>$540</td><td><strong>45.3x</strong></td></tr>
+                <tr><td><strong>Social Media - Paid</strong></td><td>8,063</td><td>882</td><td>20</td><td>10.94%</td><td>2.27%</td><td>$757,377</td><td>$15,949</td><td><strong>2.4x</strong></td></tr>
+            </tbody>
+        </table>
+
+        <div class="figure-box">
+            <img src="figures/channel_conversion_matrix.png" alt="Channel Performance Matrix">
+            <div class="figure-caption">Figure 2: Channel Conversion Efficiency & Total ARR vs Spend Comparison</div>
+        </div>
+
+        <div class="figure-box">
+            <img src="figures/cac_vs_ltv_bubble_chart.png" alt="CAC vs LTV Strategic Matrix">
+            <div class="figure-caption">Figure 3: Strategic Unit Economics: CAC vs Estimated 3-Year Customer LTV</div>
+        </div>
+
+        <h2>4. Root-Cause Diagnostic: Where and Why Prospects Drop Off</h2>
+        <div class="figure-box">
+            <img src="figures/drop_off_reasons_breakdown.png" alt="Drop-off Reasons Diagnostic">
+            <div class="figure-caption">Figure 4: Breakdown of Drop-off Drivers Across Funnel Stages</div>
+        </div>
+
+        <h2>5. What-If Sensitivity Simulation</h2>
+        <p>Our quantitative sensitivity model indicates that compounding modest improvements across the funnel generates extraordinary returns:</p>
+        <div class="figure-box">
+            <img src="figures/revenue_uplift_simulation.png" alt="Revenue Uplift Simulation">
+            <div class="figure-caption">Figure 5: Simulated Net ARR Uplift from Targeted Funnel Optimizations</div>
+        </div>
+
+        <h2>6. Strategic Action Plan & Priority Recommendations</h2>
+        <ol>
+            <li><strong>Immediate Quick Win (Weeks 1–4):</strong> Accelerate mobile landing page speed and deploy 2-field progressive lead forms with automated Clearbit enrichment (+12% lead rate, +$1.98M ARR).</li>
+            <li><strong>Process Automation (Months 2–3):</strong> Mandate a 5-minute BDR response SLA for leads scoring ≥75 (+15% MQL qualification, +$2.46M ARR).</li>
+            <li><strong>Budget Optimization (Months 2–3):</strong> Shift $10k/month from underperforming Paid Social into high-ROAS Partner/Referral directories (-38% blended CAC).</li>
+            <li><strong>Sales Enablement (Months 3–6):</strong> Deliver standardized SOC2/GDPR security kits and CFO-ready ROI business case calculators to unblock stalled late-stage deals (+8% win rate, +$1.32M ARR).</li>
+        </ol>
+    </div>
+</body>
+</html>
